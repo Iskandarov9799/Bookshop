@@ -1,0 +1,38 @@
+<%- include("./parts/header.ejs") %> 
+<% var error %>  
+
+
+<h2 class="text-center mt-4">
+	Register
+</h2>
+
+<div class="container w-100 mb-5 d-flex flex-column align-items-center justify-content-center">
+	
+	<% if(error) { %>
+		<div class="alert alert-danger">
+			<%= error %> 
+		</div>
+	<% } %> 
+
+	<form method="POST"  class="mt-4 mb-4 w-50 d-flex flex-column align-items-center justify-content-center" autocomplete="off">
+		 <div class="row">
+			 <div class="col-lg-12">
+				 <input type="text" name="name" class="form-control mt-3" placeholder="Your Username" required>
+
+				 <input type="number" name="phone" class="form-control mt-3" placeholder="Your Phone number" required>
+
+				 <input type="email" name="email" class="form-control mt-3" placeholder="Your Email" required>
+
+				<input type="password" name="password" class="form-control mt-3" placeholder="Your Password" required>
+			 </div>
+		 </div>
+
+		 <button type="submit" class="btn btn-primary mt-4 w-50">
+			 Register
+		 </button>
+	</form>
+
+	<p>Do you have account? <a href="/login">Login</a></p>
+
+</div>
+<%- include("./parts/footer.ejs") %> 
